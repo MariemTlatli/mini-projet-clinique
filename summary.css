@@ -1,0 +1,115 @@
+/* Styles généraux */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Conteneur pour centrer le contenu */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Styles pour le header */
+header {
+  background-color: #34495e;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Styles pour le main et sections */
+main {
+  padding: 40px 0;
+  background-color: #ecf0f1;
+}
+
+main h1 {
+  color: #2c3e50;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+main img {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+  border-radius: 10px;
+}
+
+main p {
+  font-size: 1.1em;
+  color: #34495e;
+  margin-top: 10px;
+}
+
+.presentation,
+.situation {
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Styles pour le footer */
+footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Styles pour la version mobile */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    padding: 0;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+}
