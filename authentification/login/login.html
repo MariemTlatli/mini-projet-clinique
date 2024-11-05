@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Connexion</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Connexion</h1>
+      <form id="loginForm">
+        <input type="email" id="signInEmail" placeholder="E-mail" required />
+        <input
+          type="password"
+          id="signInPassword"
+          placeholder="Mot de passe"
+          required
+        />
+        <button type="button" onclick="signIn()">Se connecter</button>
+        <p id="signInMessage" class="message"></p>
+      </form>
+      <!-- Lien vers la page d'inscription -->
+      <p>
+        Pas encore inscrit ?
+        <a href="./../signin/signinPage.html">Créer un compte</a>
+      </p>
+    </div>
+    <script src="./../usersData/users.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>

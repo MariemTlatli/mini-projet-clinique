@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inscription</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Inscription</h1>
+      <form id="signUpForm" onsubmit="return validateForm()">
+        <input
+          type="text"
+          id="signUpUsername"
+          placeholder="Nom d'utilisateur"
+          required
+        />
+        <p id="usernameError" class="error-message"></p>
+
+        <input type="email" id="signUpEmail" placeholder="E-mail" required />
+        <p id="emailError" class="error-message"></p>
+
+        <input
+          type="password"
+          id="signUpPassword"
+          placeholder="Mot de passe"
+          required
+        />
+        <p id="passwordError" class="error-message"></p>
+
+        <input
+          type="text"
+          id="signUpPhone"
+          placeholder="Numéro de téléphone"
+          required
+        />
+        <p id="phoneError" class="error-message"></p>
+
+        <input
+          type="text"
+          id="signUpSpecialty"
+          placeholder="Spécialité"
+          required
+        />
+        <p id="specialtyError" class="error-message"></p>
+
+        <button type="submit">S'inscrire</button>
+        <p id="signUpMessage" class="message"></p>
+      </form>
+      <p>Déjà inscrit ? <a href="./../login/login.html">Se connecter ici</a></p>
+    </div>
+    <script src="validation.js"></script>
+    <script src="./../usersData/users.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
