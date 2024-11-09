@@ -1,5 +1,8 @@
 // Fonction de validation du formulaire
 function validateForm() {
+  console.log("initialement");
+  console.table(JSON.parse(localStorage.getItem("users")) || defaultUsers);
+
   // Récupération des valeurs du formulaire
   const username = document.getElementById("signUpUsername").value;
   const email = document.getElementById("signUpEmail").value;
@@ -22,6 +25,7 @@ function validateForm() {
   if (isValid) {
     document.getElementById("signUpMessage").textContent =
       "Inscription réussie !";
+    signUp();
   }
 
   return isValid;
@@ -70,7 +74,7 @@ function validatePassword(password) {
 
 // Validation du numéro de téléphone
 function validatePhone(phone) {
-  const phonePattern = /^\d{8,}$/; // Modifié pour accepter au moins 8 chiffres
+  const phonePattern = /^\d{8,}$/; 
   if (!phonePattern.test(phone)) {
     document.getElementById("phoneError").textContent =
       "Le numéro de téléphone doit contenir uniquement des chiffres et au moins 8 caractères.";

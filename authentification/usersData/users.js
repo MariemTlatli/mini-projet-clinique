@@ -1,5 +1,4 @@
-// users.js
-const users = [
+const defaultUsers = [
   {
     username: "testuser1",
     email: "testuser1@example.com",
@@ -15,3 +14,11 @@ const users = [
     specialty: "Pédiatrie",
   },
 ];
+
+// Charger les utilisateurs depuis le local storage ou utiliser les utilisateurs par défaut
+const users = JSON.parse(localStorage.getItem("users")) || defaultUsers;
+
+// Sauvegarder les utilisateurs dans le local storage
+function saveUsersToLocalStorage() {
+  localStorage.setItem("users", JSON.stringify(users));
+}

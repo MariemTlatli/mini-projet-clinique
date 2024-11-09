@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consultations</title>
+    <link rel="stylesheet" href="../specialite.css" />
+    <link rel="stylesheet" href="../summary.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Clinique Les Oliviers</h1>
+        <nav>
+          <ul>
+            <li><a href="../index.html">À Propos</a></li>
+            <li><a href="../specialite.html">Spécialités</a></li>
+            <li><a href="../blocOperatoire.html">Bloc Operatoire</a></li>
+            <li><a href="consultation.html">Consultations</a></li>
+            <li>
+              <a href="./../authentification/signin/signinPage.html">SignIn</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section>
+        <h2>Consultations Médicales et Spécialisées</h2>
+        <p>
+          La clinique propose un large éventail de consultations dans diverses
+          spécialités médicales, permettant une prise en charge complète et
+          personnalisée des patients. Nous mettons à disposition des médecins
+          spécialistes dans des domaines variés, prêts à répondre aux besoins de
+          chaque patient.
+        </p>
+        <ul>
+          <li>Cardiologie</li>
+          <li>Dermatologie</li>
+          <li>Gynécologie</li>
+          <li>Orthopédie</li>
+          <li>Pédiatrie</li>
+          <li>Ophtalmologie</li>
+        </ul>
+        <p>
+          Chaque consultation est réalisée dans des espaces adaptés, avec des
+          équipements modernes pour garantir un diagnostic précis et un suivi
+          optimal.
+        </p>
+
+        <!-- Sélecteur pour choisir la devise -->
+        <label for="currencySelector">Choisir la devise : </label>
+        <select id="currencySelector" onchange="toggleCurrency()">
+          <option value="dinar">Dinar</option>
+          <option value="euro">Euro</option>
+        </select>
+
+        <table id="consultationsTable">
+          <thead>
+            <tr>
+              <th>Spécialité</th>
+              <th>Médecin</th>
+              <th id="dinarColumnHeader">Prix (Dinar)</th>
+              <th id="euroColumnHeader" style="display: none">Prix (Euro)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Cardiologie</td>
+              <td>Dr. Ben Salah</td>
+              <td class="price-dinar">120</td>
+              <td class="price-euro" style="display: none"></td>
+            </tr>
+            <tr>
+              <td>Dermatologie</td>
+              <td>Dr. Khemiri</td>
+              <td class="price-dinar">80</td>
+              <td class="price-euro" style="display: none"></td>
+            </tr>
+            <tr>
+              <td>Gynécologie</td>
+              <td>Dr. Trabelsi</td>
+              <td class="price-dinar">100</td>
+              <td class="price-euro" style="display: none"></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <img
+          src="https://www.cliniquelesoliviers.net/sites/default/files/consultations.jpg"
+          alt="Image des consultations à la clinique"
+        />
+      </section>
+    </main>
+    <footer>
+      <p>
+        &copy; 2024 Clinique Médicale - Tous droits réservés |
+        <a href="https://www.cliniquelesoliviers.net" target="_blank">Source</a>
+      </p>
+    </footer>
+
+    <script src="./consultation/conversion.js"></script>
+  </body>
+</html>
